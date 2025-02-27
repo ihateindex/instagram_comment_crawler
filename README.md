@@ -10,6 +10,7 @@
 <!-- 디렉토리 생성 및 vs code 작업영역 만들고 터미널에서 진행 -->
 
 python3 -m venv venv
+
 source venv/bin/activate
 
 ## 3. 필요한 패키지 설치
