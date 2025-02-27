@@ -20,6 +20,7 @@ pip install -r requirements.txt
 ## 4. env 파일 생성 및 환경 변수 설정
 
 INSTAGRAM_ID={인스타그램 아이디}
+
 INSTAGRAM_PW={인스타그램 비밀번호}
 
 ## 5. 인스타그램 게시물 URL 설정
