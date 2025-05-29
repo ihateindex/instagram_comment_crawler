@@ -42,3 +42,9 @@ SAVE_PATH={저장할 파일명}
 ## 8. 저장된 파일 확인
 
 crawling_comments.py 파일 내에서 변수명 SAVE_PATH에 설정한 파일명으로 csv 파일 생성됨
+
+## 9. 가상환경 종료
+
+<!-- venu가 activate된 터미널에서 진행-->
+
+deactivate
