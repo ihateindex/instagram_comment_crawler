@@ -94,23 +94,19 @@ try:
     
     for comment_element in comment_elements:
       try:
-          print("댓글 요소 찾음")
           # 댓글 작성자 추출
           username = comment_element.find_element(
               By.CSS_SELECTOR, 'span._aade'
           ).text.strip()
-          print("댓글 작성자:", username)
           
           # 댓글 내용 추출 (내용 span은 대부분 하나로 존재)
           comment = comment_element.find_element(
               By.CSS_SELECTOR,
               'div.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1cy8zhl.x1oa3qoh.x1nhvcw1 > span'
           ).text.strip()
-          print("댓글 내용:", comment)
           # 시간 정보 추출
           time_element = comment_element.find_element(By.TAG_NAME, "time")
           timestamp = time_element.get_attribute("datetime")
-          print("작성 시간:", timestamp)
 
           # 필터링 (불필요한 텍스트 제외)
           if username and comment and not any(skip in comment for skip in ["답글", "좋아요"]):
